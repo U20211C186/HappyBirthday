@@ -1,42 +1,60 @@
 body {
-    margin: 0;
-    background: #020202;
-    cursor: crosshair;
-  }
-  canvas{display:block}
+  margin: 0;
+  background: #020202;
+  cursor: crosshair;
+}
+canvas {
+  display: block;
+}
+h1 {
+  position: absolute;
+  top: 30%; /* Posición más central para pantallas grandes */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #F4F5F7;
+  font-family: "Impact, Charcoal, sans-serif";
+  font-size: 5em; /* Tamaño grande para pantallas grandes */
+  font-weight: 800;
+  -webkit-user-select: none;
+  user-select: none;
+}
+h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #F4F6F7;
+  font-family: "Impact, Charcoal, sans-serif";
+  font-size: 5em; /* Mantenemos un tamaño grande para coherencia */
+  font-weight: 800;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+h3 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #F4F6F7;
+  font-family: "Impact, Charcoal, sans-serif";
+  font-size: 1em;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Media Queries para dispositivos más pequeños */
+@media (max-width: 768px) {
   h1 {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #F4F5F7;
-    font-family: "Impact,Charcoal,sans-serif";
-    font-size: 5em;
-    font-weight: 800;
-    -webkit-user-select: none;
-    user-select: none;
+      top: 40%; /* Un poco más bajo para evitar pegarse al borde superior */
+      font-size: 3em; /* Tamaño más pequeño para mejor visualización */
   }
   h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #F4F6F7;
-    font-family: "Impact,Charcoal,sans-serif";
-    font-size: 5em;
-    font-weight: 800;
-    -webkit-user-select: none;
-    user-select: none;
+      top: 60%; /* Ajuste para mantener una buena distancia del h1 */
+      font-size: 3em; /* Tamaño reducido para consistencia */
   }
-
   h3 {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #F4F6F7;
-    font-family: "Impact,Charcoal,sans-serif";
-    font-size: 1em;
-    -webkit-user-select: none;
-    user-select: none;
+      top: 80%; /* Ajuste para no superponerse con h2 */
+      font-size: 0.8em; /* Tamaño más pequeño para adaptarse a la pantalla */
   }
+}
